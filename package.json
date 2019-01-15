@@ -1,8 +1,8 @@
 {
-  "name": "netsoc-css-talk",
+  "name": "netsoc-docker-talk",
   "version": "2.0.0",
-  "description": "Showing people how easy CSS can be when other people do all of the work for you.",
-  "homepage": "http://crnlpanic.netsoc.co/techtalks/css",
+  "description": "Dockerboi teaches Docker version 2.",
+  "homepage": "http://crnlpanic.netsoc.co/techtalks/docker",
   "scripts": {
     "build": "node-sass css/scss/theme.scss css/theme.css"
   },
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/crnbrdrck/netsoc-css-talk.git"
+    "url": "git://github.com/crnbrdrck/netsoc-docker-talk.git"
   },
   "devDependencies": {
     "node-sass": "^4.9.3"

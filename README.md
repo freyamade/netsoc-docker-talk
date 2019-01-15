@@ -1,32 +1,25 @@
-# CSS
+# Docker
 
-![title slide](https://raw.githubusercontent.com/crnbrdrck/netsoc-css-talk/master/title.png)
+![title slide](https://raw.githubusercontent.com/crnbrdrck/netsoc-docker-talk/master/title.png)
 
-Cascading Style Sheets (CSS) are a way of styling your HTML to make your website look nice af.
-But with such a large emphasis on terms like "mobile-first", CSS can be a tedious job.
+Docker is probably the most used containerisation platforms in the market at the moment?
 
-But it doesn't have to be!
-There are some great people out there that have done and continue to do all the hard work for us by creating frameworks such as Materialize, Bootstrap, Bulma and more!
+What's a container I hear you say, and by coming to this talk you'll hopefully end up learning about what they are and why you should use it.
 
-This talk focuses on these frameworks and how easy it is to make your website look nice *and* be mobile friendly with ease!
-
-Also we will briefly discuss SASS/SCSS as these systems are widely used in said frameworks to customize them further!
+It's more a tool used in industry for deployment of applications but with the soon coming NetSoc Containers-as-a-Service platform you will soon be able to host your own applications in containers, and then you'll never look back.
 
 ## Roadmap
 
 The talk will go as follows;
 
-1. Brief Introduction to HTML, CSS, JS
-2. Introduction of 3 frameworks
-    - Bootstrap
-    - MaterializeCSS
-    - Bulma
-3. Using one as an example, build up a simple webpage from scratch
-4. Show how the same page can look in the other 2 frameworks
-5. Brief introduction to SCSS
-    - Variables
-    - Maps
-    - Loops
-    - etc.
-6. Simple SCSS example creating `is-color` classes for some colors and use it in a webpage
-7. Profit
+1. Brief Introduction
+    - What is a container
+    - Containers vs VMs
+2. Getting started with Docker
+    - Images vs Containers
+    - Let's make a basic image
+    - Using Apache Docker image for development
+3. Case Study of CIX
+    - The dark ages of VMs
+    - The new age of Docker / Kubernetes
+4. Conclusion
