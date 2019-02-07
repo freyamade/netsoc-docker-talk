@@ -39,10 +39,11 @@
                             </div>
                         </div>
                         <div class="card-action">
-                            <p>Ciaran Broderick, SysAdmin In Spirit</p>
+                            <p>Ciaran Broderick, ExOfficio</p>
                         </div>
                     </div>
                 </section>
+                <!-- /Title -->
 
                 <!-- Roadmap -->
                 <section>
@@ -55,7 +56,7 @@
                                 </tr>
                                 <tr class="fragment">
                                     <th>Part 2</th>
-                                    <td>Getting Started</td>
+                                    <td>Getting Started with Docker</td>
                                 </tr>
                                 <tr class="fragment">
                                     <th>Part 3</th>
@@ -72,6 +73,7 @@
                         </div>
                     </div>
                 </section>
+                <!-- /Roadmap -->
 
                 <!-- Part 1; Intro to Docker -->
                 <section>
@@ -85,7 +87,8 @@
                                 <strong>1. What is Docker?</strong>
                             </div>
                         </div>
-                    </section> <!-- /root -->
+                    </section>
+                    <!-- /root -->
 
                     <!-- Docker -->
                     <section>
@@ -94,7 +97,8 @@
                                 <em>Containers</em>
                             </div>
                         </div>
-                    </section> <!-- /Docker -->
+                    </section>
+                    <!-- /Docker -->
 
                     <!-- Container -->
                     <section>
@@ -106,7 +110,8 @@
                                 </blockquote>
                             </div>
                         </div>
-                    </section> <!-- /Container -->
+                    </section>
+                    <!-- /Container -->
 
                     <!-- VM Architecture -->
                     <section>
@@ -115,7 +120,8 @@
                                 <img src="https://www.docker.com/sites/default/files/d8/2018-11/container-vm-whatcontainer_2.png" height="650" width="auto" alt="VM Architecture" />
                             </div>
                         </div>
-                    </section> <!--/ VM Architecture -->
+                    </section>
+                    <!--/ VM Architecture -->
 
                     <!-- Container Architecture -->
                     <section>
@@ -124,7 +130,8 @@
                                 <img src="https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-appliction-blue-border_2.png" height="650" width="auto" alt="Container Architecture" />
                             </div>
                         </div>
-                    </section> <!--/ Container Architecture -->
+                    </section>
+                    <!--/ Container Architecture -->
                 </section>
                 <!-- /Part 1 -->
 
@@ -151,7 +158,8 @@
                                 </table>
                             </div>
                         </div>
-                    </section> <!-- /setup -->
+                    </section>
+                    <!-- /setup -->
 
                     <!-- Explanation pt1 -->
                     <section>
@@ -177,7 +185,8 @@
                                 </table>
                             </div>
                         </div>
-                    </section> <!-- /explanation pt1 -->
+                    </section>
+                    <!-- /explanation pt1 -->
 
                     <!-- Explanation pt2 -->
                     <section>
@@ -189,7 +198,7 @@
                                         <td>Imagine the ground is (again) a nice clean VM that we just made</td>
                                     </tr>
                                     <tr class="fragment">
-                                        <td>We have to install 1 (usually) thing on it; Docker <em>(no analogy here sorry)</em></td>
+                                        <td>We have to install 1 (usually) thing on it; Docker <em class="fragment">(no analogy here sorry)</em></td>
                                     </tr>
                                     <tr class="fragment">
                                         <td>The tent is in its bag (Docker image) ready to be opened</td>
@@ -203,7 +212,8 @@
                                 </table>
                             </div>
                         </div>
-                    </section> <!-- /explanation pt2 -->
+                    </section>
+                    <!-- /explanation pt2 -->
 
                     <!-- pop up tent gif -->
                     <section>
@@ -220,6 +230,107 @@
                     </section>
                     <!-- /pop up tent gif -->
                 </section>
+
+                <!-- Getting Started -->
+                <section>
+                    <!-- Root -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-image">
+                                <img src="https://docs.docker.com/get-started/images/laurel-docker-containers.png" width="auto" height="500" alt="Docker Harbour with Friends" />
+                            </div>
+                            <div class="card-content">
+                                <strong>2. Enough about tents, let's talk about Docker</strong>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /root -->
+
+                    <!-- One more mention of tents -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>One more mention of tents</strong>
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>Back in the dumb tent analogy I mentioned <em>Images</em> and <em>Containers</em></td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td><em>Images</em> are a built application (or whatever) ready to be run by Docker</td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td><em>Containers</em> are running instances of <em>Images</em></td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>I'm now done talking about tents</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /tents -->
+
+                    <!-- Installing docker -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <p><strong>Let's Install Docker</strong></p>
+                                <hr />
+                                <p>For Windows / Mac Users;</p>
+                                <a href="https://docs.docker.com/engine/installation/" target="_blank" class="btn-flat">Install Guide</a>
+                                <hr />
+                                <p>
+                                    For (most) Linux Users;
+                                    <pre><code>curl -sSL https://get.docker.com/ | sh</code></pre>
+                                    For Arch users; it's in the community repo so just install it with whatever it is you use
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /installation -->
+
+                    <!-- hello-world -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <p><strong>Even Docker isn't safe from "Hello, World!"</strong></p>
+                                <hr />
+                                <p>Once you have it installed;</p>
+                                <pre><code data-trim data-language="bash">docker run hello-world</code></pre>
+                                <p>should give you the following output;</p>
+                                <pre><code data-trim>
+                                    Hello from Docker!
+                                    This message shows that your installation appears to be working correctly.
+                                </code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /hello-world -->
+                </section>
+                <!-- /Getting Started -->
+
+                <!-- Building our own Docker Image -->
+                <section>
+                    <!-- Discussion on images -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <p><strong>2.5 Let's build our own Docker Image</strong></p>
+                                <hr />
+                                <p class="fragment">In the output of the last command I gave you, you might have seen something like this;</p>
+                                <pre class="fragment"><code data-trim data-language="bash">
+                                    Unable to find image 'hello-world:latest' locally
+                                    latest: Pulling from library/hello-world
+                                </code></pre>
+                                <p class="fragment">
+                                    This is Docker saying "I don't have the 'hello-world' image on this machine, let me go get it"
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /Discussion -->
+                </section>
+                <!-- /Building our own -->
 
                 <section>
                     <div class="card midpoint z-depth-5">
