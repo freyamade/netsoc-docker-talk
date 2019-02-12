@@ -439,7 +439,7 @@
                                     # Expose port 5000
                                     EXPOSE 5000
 
-                                    # Set the entrypoint
+                                    # Set the entrypoint (CMD also works here)
                                     ENTRYPOINT python3.7 app.py
                                 </code></pre>
                             </div>
@@ -504,6 +504,12 @@
                                     <tr class="fragment">
                                         <td>Last time <em>I</em> checked, it works, so if it doesn't for you it's your fault &gt;.&gt;</td>
                                     </tr>
+                                    <tr class="fragment">
+                                        <td>Also you can use the following command to list all running containers;</td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td><pre style="width: 100%;"><code data-lang="bash">docker ps</code></pre></td>
+                                    </tr>
                                 </table>
                             </div>
                         </div>
@@ -514,11 +520,23 @@
 
                 <!-- other cool stuff -->
                 <section>
-                    <!-- -v -->
+                    <!-- root -->
                     <section>
                         <div class="card light z-depth-5">
                             <div class="card-content">
                                 <strong>0.2 Some other cool stuff</strong>
+                                <hr />
+                                <p>Before I spill some company secrets, I want to share a couple of other cool things with you</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /root -->
+
+                    <!-- -v -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong><code>-v</code></strong>
                                 <table class="table">
                                     <tr class="fragment">
                                         <td>
@@ -538,6 +556,82 @@
                         </div>
                     </section>
                     <!-- /-v -->
+
+                    <!-- compose -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>Compose</strong>
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            What if you have an application with a lot of required external services (sql, load balancer, etc)?
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            You could set up all the containers yourself manually...
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>Or you could use Docker Compose (installed separately)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /compose -->
+
+                    <!-- compose -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong><code>crnlpanic</code> + Compose</strong>
+                                <hr />
+                                <p class="fragment">Let's say I add some reason to use <code>redis</code> in the <code>crnlpanic</code> project.</p>
+                                <p class="fragment">I could have the following compose file;</p>
+                                <pre class="fragment"><code data-trim data-language="YAML">
+                                    version: '3'
+                                    services:
+                                      web:
+                                        image: "crnlpanic"
+                                        ports:
+                                         - "5000:5000"
+                                      redis:
+                                        image: "redis:alpine"
+                                </code></pre>
+                                <p class="fragment">And then bring up both images using;</p>
+                                <pre class="fragment"><code data-lang="bash">docker-compose up -d</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /compose -->
+
+                    <!-- k8s -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>Kubernetes</strong>
+                                <blockquote cite="https://kubernetes.io" class="fragment">
+                                    Kubernetes (k8s) is an open-source system for automating deployment, scaling, and management of containerized applications.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /k8s -->
+
+                    <!-- dockerdoom -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-image text-center">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/E1Lm1NFthX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <strong>Docker DOOM</strong>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /dockerdoom -->
                 </section>
                 <!-- /other cool stuff -->
 
