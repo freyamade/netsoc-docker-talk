@@ -548,13 +548,16 @@
                                 <table class="table">
                                     <tr class="fragment">
                                         <td>
-                                            Run this from the project directory, edit <code>templates/index.html</code> and reload the page and you'll see it update in real time;
+                                            Run this from the project directory;
                                         </td>
                                     </tr>
                                     <tr class="fragment">
                                         <td>
                                             <pre style="width: 100%;"><code data-lang="bash">docker run -p 5000:5000 -v $(pwd):/home/crnlpanic/public_html -d crnlpanic</code></pre>
                                         </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>Now edit <code>templates/index.html</code>, reload the page and you'll see it update in real time!</td>
                                     </tr>
                                     <tr class="fragment">
                                         <td>This is handy if you have your application Dockerised already and want to do development work</td>
@@ -896,6 +899,35 @@
                     </div>
                 </section>
                 <!-- /so how do I deploy using Docker -->
+
+                <!-- Roadmap -->
+                <section>
+                    <div class="card light z-depth-5">
+                        <div class="card-content">
+                            <table class="table">
+                                <tr class="fragment">
+                                    <td>Containers vs VMs</td>
+                                    <td class="fragment"><strong><em>T E N T S</em></strong></td>
+                                    <td class="fragment">Installation</td>
+                                </tr>
+                                <tr class="fragment">
+                                    <td>Docker Hub</td>
+                                    <td class="fragment">How to build your image</td>
+                                    <td class="fragment">Docker Compose</td>
+                                </tr>
+                                <tr class="fragment">
+                                    <td>Kubernetes kinda</td>
+                                    <td class="fragment">Company secrets that my boss let me share</td>
+                                    <td class="fragment">Another cool Netsoc project is coming soon</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="card-action">
+                            <p><strong>Conclusions</strong></p>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Roadmap -->
 
                 <section>
                     <div class="card light z-depth-5">
