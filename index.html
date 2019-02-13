@@ -34,7 +34,7 @@
                         <div class="card-content">
                             <div class="row">
                                 <div class="col s12">
-                                    <p>Docker - A worth<em>whale</em> tool to learn</p>
+                                    <p style="color: #8C3045;">Docker - A love story</p>
                                 </div>
                             </div>
                         </div>
@@ -289,7 +289,7 @@
                                 <p>Once you have it installed;</p>
                                 <pre><code data-trim data-language="bash">docker run hello-world</code></pre>
                                 <p>should give you the following output;</p>
-                                <pre><code data-trim>
+                                <pre style="width: 100%;"><code data-trim>
                                     Hello from Docker!
                                     This message shows that your installation appears to be working correctly.
                                 </code></pre>
@@ -309,7 +309,7 @@
                                 <p><strong>2.5 More on Images</strong></p>
                                 <hr />
                                 <p class="fragment">In the output of the last command I gave you, you might have seen something like this;</p>
-                                <pre class="fragment"><code data-trim data-language="bash">
+                                <pre class="fragment" style="width: 100%;"><code data-trim data-language="bash">
                                     Unable to find image 'hello-world:latest' locally
                                     latest: Pulling from library/hello-world
                                 </code></pre>
@@ -508,7 +508,15 @@
                                         <td>Also you can use the following command to list all running containers;</td>
                                     </tr>
                                     <tr class="fragment">
-                                        <td><pre style="width: 100%;"><code data-lang="bash">docker ps</code></pre></td>
+                                        <td>
+                                            <pre style="width: 100%;"><code data-lang="bash" data-trim>
+                                                # show running containers
+                                                docker ps
+
+                                                # show all containers, dead or alive
+                                                docker ps -a
+                                            </code></pre>
+                                        </td>
                                     </tr>
                                 </table>
                             </div>
@@ -557,6 +565,31 @@
                     </section>
                     <!-- /-v -->
 
+                    <!-- webdev -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong><code>-v</code> + web development</strong>
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            Working on a new web project but don't want to install Apache on your machine to test?
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            <pre style="width: 100%;"><code data-lang="bash" data-trim>
+                                                # Run from inside project directory, then go to localhost:8080
+                                                docker run -v $(pwd):/usr/local/apache2/htdocs/ -p 8080:80 -d httpd
+                                            </code></pre>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /webdev -->
+
                     <!-- compose -->
                     <section>
                         <div class="card light z-depth-5">
@@ -582,13 +615,14 @@
                     </section>
                     <!-- /compose -->
 
-                    <!-- compose -->
+                    <!-- crnlpanic + compose -->
                     <section>
                         <div class="card light z-depth-5">
                             <div class="card-content">
                                 <strong><code>crnlpanic</code> + Compose</strong>
                                 <hr />
                                 <p class="fragment">Let's say I add some reason to use <code>redis</code> in the <code>crnlpanic</code> project.</p>
+                                <hr />
                                 <p class="fragment">I could have the following compose file;</p>
                                 <pre class="fragment"><code data-trim data-language="YAML">
                                     version: '3'
@@ -605,7 +639,7 @@
                             </div>
                         </div>
                     </section>
-                    <!-- /compose -->
+                    <!-- /crnlpanic + compose -->
 
                     <!-- k8s -->
                     <section>
@@ -634,6 +668,170 @@
                     <!-- /dockerdoom -->
                 </section>
                 <!-- /other cool stuff -->
+
+                <!-- trade secrets -->
+                <section>
+                    <!-- intro -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-image">
+                                <img src="https://www.mundodocker.com.br/wp-content/uploads/2017/02/docker_secrets.png" width="auto" height="500" alt="Docker Harbour with Friends" />
+                            </div>
+                            <div class="card-content">
+                                <strong>3. Let's spill some trade secrets</strong>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /intro -->
+
+                    <!-- cix -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-image">
+                                <img src="img/saas.png" width="auto" height="500" alt="CIX SaaS Diagram" />
+                            </div>
+                            <div class="card-content">
+                                <strong>CIX Software</strong>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /cix -->
+
+                    <!-- old setup -->
+                    <section>
+                        <img src="img/old_setup.png" width="auto" height="600" alt="CIX old architecture" />
+                    </section>
+                    <!-- /old setup -->
+
+                    <!-- new setup -->
+                    <section>
+                        <img src="img/new_setup.png" width="auto" height="500" alt="CIX new architecture" />
+                    </section>
+                    <!-- /new setup -->
+
+                    <!-- speed increase -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>Speed Increase</strong>
+                                <hr />
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            We needed to test that our system actually made an improvement.
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            List 100 Users from Py2 Live and Py3 Stage APIs one million times, calculate average time locally.
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Speed increase from Python2 to Python3; <strong class="fragment">57x</strong>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /speed increase -->
+
+                    <!-- speed increase cont -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>Speed Increase (cont'd)</strong>
+                                <hr />
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            Speed increase mostly due to architectural changes.
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Original API running as monolith on single server.
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            New API running as clusters of smaller servers with load balancing.
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /speed increase cont-->
+
+                    <!-- old deployment -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>Old Deployment System</strong>
+                                <hr />
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            Gitlab CI automates deployment when code is pushed to specific branches.
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Old method of deployment; <code>fabric</code>
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            SSH onto appropriate server, <code>git fetch origin</code>, and <code>git reset --hard &lt;branch&gt;</code>
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Most of the time, deployment scripts did not contain a job to update requirements
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /old deployment -->
+
+                    <!-- new deployment -->
+                    <section>
+                        <div class="card light z-depth-5">
+                            <div class="card-content">
+                                <strong>New Deployment System</strong>
+                                <hr />
+                                <table class="table">
+                                    <tr class="fragment">
+                                        <td>
+                                            Deployment still automated but handled differently
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Gitlab CI triggers Docker builds from specific branches
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            After the image(s) are built, we deploy them to the appropriate cluster(s)
+                                        </td>
+                                    </tr>
+                                    <tr class="fragment">
+                                        <td>
+                                            Rolling release on the cluster; new images brought up before bringing down old ones
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- /new deployment -->
+                </section>
+                <!-- /trade secrets -->
 
                 <section>
                     <div class="card light z-depth-5">
