@@ -8,21 +8,8 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic");
 
 // Default mixins and settings -----------------
-@import "./mixins";
 @import "./settings";
 // ---------------------------------------------
-
-.card-content {
-  color: $headingColor;
-}
-
-.reveal section .card .card-image img {
-  max-height: 100%;
-  max-width: 100%;
-  border: 0;
-  margin: 0;
-  box-shadow: 0 0 0 0;
-}
 
 .reveal pre code {
   font-family: "Ubuntu Mono", sans-serif;
@@ -36,30 +23,11 @@
   right: 74px;
 }
 
-.card.light {
-    background-color: $mainColor !important;
-    color: $backgroundColor !important;
-}
-
-.card.dark {
-    color: $mainColor !important;
-    background-color: $backgroundColor !important;
-    & .card-content {
-        color: $mainColor !important;
-    }
-    & ::selection {
-        color: $selectionBackgroundColor;
-        background: $selectionColor;
-        text-shadow: none;
-    }
-
-    & ::-moz-selection {
-        color: $selectionBackgroundColor;
-        background: $selectionColor;
-        text-shadow: none;
-    }
-}
-
 // Theme template ------------------------------
 @import "./base-theme";
 // ---------------------------------------------
+
+// Override some stuff in the base theme
+.reveal .progress span {
+  background: linear-gradient(to right, #0046cc, #ff206e);
+}
