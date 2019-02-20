@@ -1,18 +1,19 @@
 {
   "name": "netsoc-docker-talk",
   "version": "2.0.0",
-  "description": "Dockerboi teaches Docker version 2.",
-  "homepage": "http://crnlpanic.netsoc.co/techtalks/docker",
+  "description": "netsoc docker talk 2019",
+  "homepage": "http://freyamade.netsoc.co/techtalks/docker",
   "scripts": {
     "build": "node-sass css/scss/theme.scss css/theme.css"
   },
   "author": {
-    "name": "Ciaran Broderick",
-    "web": "http://crnbrdrck.xyz"
+    "name": "freyamade",
+    "web": "http://freyamade.netsoc.co"
   },
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/crnbrdrck/netsoc-docker-talk.git"
+    "url": "git://github.com/freyamade/netsoc-docker-talk.git"
   },
   "devDependencies": {
     "node-sass": "^4.9.3"
