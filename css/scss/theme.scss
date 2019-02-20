@@ -15,12 +15,15 @@
   font-family: "Ubuntu Mono", sans-serif;
 }
 
-.reveal a.btn-flat {
-  font: 15px 'Montserrat', sans-serif;
-}
-
 .reveal .controls .navigate-left {
   right: 74px;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #0046cc, #ff206e);
+    border-image-slice: 1;
+    display: inline-block;
 }
 
 // Theme template ------------------------------
@@ -28,6 +31,11 @@
 // ---------------------------------------------
 
 // Override some stuff in the base theme
-.reveal .progress span {
-  background: linear-gradient(to right, #0046cc, #ff206e);
+.reveal .progress span, .reveal hr {
+  background-image: linear-gradient(to right, #0046cc, #ff206e);
+}
+
+.reveal hr {
+    border: 0;
+    height: 1px;
 }
