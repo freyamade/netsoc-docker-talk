@@ -1,6 +1,6 @@
 # Docker
 
-![title slide](https://raw.githubusercontent.com/crnbrdrck/netsoc-docker-talk/master/title.png)
+![title slide](https://raw.githubusercontent.com/freyamade/netsoc-docker-talk/master/title.png)
 
 Docker is probably the most used containerisation platforms in the market at the moment?
 
